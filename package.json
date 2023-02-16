@@ -1,20 +1,21 @@
 {
-  "name": "pkg-name",
+  "name": "@zwkang-dev/dotenv-util",
   "version": "0.0.0",
   "packageManager": "pnpm@7.9.0",
   "description": "> description:",
   "publishConfig": {
     "access": "public"
   },
+  "type": "module",
   "author": {
     "name": "zwkang",
     "email": "kang95630@gmail.com"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.coim/zwkang/pkg-name.git"
+    "url": "git+https://github.coim/zwkang-dev/dotenv-util.git"
   },
-  "bugs": "https://github.coim/zwkang/pkg-name/issues",
+  "bugs": "https://github.coim/zwkang-dev/dotenv-util/issues",
   "keywords": [],
   "sideEffects": false,
   "exports": {
@@ -46,7 +47,8 @@
     "start": "tsx src/index.ts",
     "release": "bumpp && npm publish",
     "typecheck": "tsc --noEmit",
-    "prepublishOnly": "npm run build"
+    "prepublishOnly": "npm run build",
+    "example": "tsx ./examples/testcase.ts"
   },
   "devDependencies": {
     "@typescript-eslint/eslint-plugin": "^5.33.1",
@@ -59,7 +61,12 @@
     "tsx": "^3.8.2",
     "typescript": "^4.7.4",
     "vitest": "^0.22.1",
-    "zwkang-prettier-config": "^0.0.3"
+    "zwkang-prettier-config": "^0.0.3",
+    "@types/node": "^18.13.0"
   },
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "dotenv": "^16.0.3",
+    "dotenv-expand": "^10.0.0"
+  }
 }
